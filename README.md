@@ -25,3 +25,29 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+## HTML Setup
+- dropdown (in form) with no options (to be injected later)
+- some section to append beanie baby elements to
+
+## State
+- what changes over time?
+     - array of astrology signs, fetched from SQL/API
+     - array of beanie babies fetched from SQL/API
+
+## Events
+- on page load
+    - request astrology signs
+    - append astrology options to dropdown (using fetched data)
+    - request list of beanie babies
+    - append beanie babies els to section (using fetched data) (displayBeanieBabies())
+- on submit (click button or hit enter) of dropdown form
+    - request a new list of filtered beanie babies from supabase
+    - displayBeanieBabies()
+
+## Slices/Features/User stories . . .
+- these are kind of 'test statements', 'expectations'
+- when QE checks the site, they are validating that these statements are true
+    - User should be able to see a list of all beanie babies when they load the page
+    - User should be able to see a list of valid astrology signs in the dropdown
+    - User should be able to submit the dropdown and see a list of beanie babies filtered by their astrology sign

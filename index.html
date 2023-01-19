@@ -11,6 +11,10 @@
     <title>Web App</title>
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"></script>
+
     <!-- js -->
     <script type="module" src="app.js"></script>
 
@@ -26,12 +30,24 @@
 
 <body>
     <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
+        <h1>Beanie Babies!</h1>
     </header>
-
+    <section>
+        Search by astrological sign:
+        <form>
+            <select>
+                <option value="">Select a sign</option>
+                <!-- options go here -->
+            </select>
+            <button>
+                search!
+            </button>
+        </form>
+    </section>
     <main>
-
+        <section class="beanie-babies">
+            <!-- beanie baby elements go here -->
+        </section>
     </main>
 
 </body>
